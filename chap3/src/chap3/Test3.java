@@ -11,9 +11,14 @@ import java.util.Scanner;
 public class Test3 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		int total = scan.nextInt();
-		System.out.println((total>=90)?"A학점":(total>=80)?"B학점":(total>=70)?"C학점":(total>=60)?"D학점":"F학점");
-	
-
+//		int total = scan.nextInt();
+//		System.out.println((total>=90)?"A학점":(total>=80)?"B학점":(total>=70)?"C학점":(total>=60)?"D학점":"F학점");
+		
+		int score = scan.nextInt();
+		String result = (score>=90)?"A":
+			            (score>=80)?"B":
+			           	(score>=70)?"C":
+			           	(score>=60)?"D":"F";
+		System.out.println(score + "점 : " + result + "학점");
 	}
 }

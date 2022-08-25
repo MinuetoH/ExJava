@@ -15,14 +15,26 @@ import java.util.Scanner;
 public class Test5 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		int adj = scan.nextInt();	// adjacent : 밑변
-		int opp = scan.nextInt();	// opposite : 높이
-		int sqr = (adj*opp)/2;		// square	: 넓이
-		System.out.println("밑변의 길이");
-		System.out.println(adj);
+//		int adj = scan.nextInt();	// adjacent : 밑변
+//		int opp = scan.nextInt();	// opposite : 높이
+//		int sqr = (adj*opp)/2;		// square	: 넓이
+//		System.out.println("밑변의 길이");
+//		System.out.println(adj);
+//		System.out.println("높이의 길이");
+//		System.out.println(opp);
+//		System.out.println("넓이는 = "+adj+"*"+opp+"/ 2");
+//		System.out.println("정답은 : "+sqr);
+//		
+//		System.out.println("밑변의 길이 : ");
+//		int bottom = scan.nextInt();	// adjacent : 밑변
+//		System.out.println("높이의 길이");
+//		int height = scan.nextInt();	// opposite : 높이
+//		System.out.println("넓이 : "+(bottom * height)/2d);
+	
+		System.out.println("밑변의 길이 : ");
+		double bottom = scan.nextInt();	// adjacent : 밑변
 		System.out.println("높이의 길이");
-		System.out.println(opp);
-		System.out.println("넓이는 = "+adj+"*"+opp+"/ 2");
-		System.out.println("정답은 : "+sqr);
+		double height = scan.nextInt();	// opposite : 높이
+		System.out.println("넓이 : "+(bottom * height) / 2);
 	}
 }

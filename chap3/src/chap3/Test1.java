@@ -17,9 +17,17 @@ public class Test1 {
 	public static void main(String[] args) {
 		System.out.println("사과의 갯수를 입력하세요:");
 		Scanner scan = new Scanner(System.in);
-		int num = scan.nextInt();
-		int box10 = num/10;
-		int box1 = num%10;
-		System.out.println("필요한 상자의 갯수 : " + (int)(box10+box1));
+//		int num = scan.nextInt();
+//		int box10 = num/10;
+//		int box1 = num%10;
+//		System.out.println("필요한 상자의 갯수 : " + (int)(box10+box1));
+		
+		int apple = scan.nextInt();
+		System.out.println("필요한 상자의 갯수 : " 
+	     + ((apple%10==0)?apple/10:apple/10 + 1) + "개");
+
+//		System.out.println("필요한 상자의 갯수 : " 
+//      + (apple/10 +((apple%10==0)?0:1)) + "개");
+
 	}
 }
