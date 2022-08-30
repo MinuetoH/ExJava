@@ -18,6 +18,8 @@ public class Test8 {
 		System.out.println("10진수 값을 입력하세요");
 		Scanner scan = new Scanner(System.in);
 		int num = scan.nextInt();
+		String nums = "0123456789ABCDEF";
+		char[] numarr = nums.toCharArray();
 		
 		int[] birnary = new int[10];
 		int[] octal = new int[10];
@@ -51,8 +53,7 @@ public class Test8 {
 		System.out.println(num+"의 10진수: "+num);
 		
 		//16진수
-		String nums = "0123456789ABCDEF";
-		char[] numarr = nums.toCharArray();
+		
 		divnum = num;
 		index = 0;
 		while(divnum != 0) {

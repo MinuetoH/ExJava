@@ -55,7 +55,7 @@ public class Test11 {
 			System.out.println();
 
 		}
-		System.out.print("합계\t");
+		System.out.print("합계\t"); 
 		for(int i=0;i<colsum.length;i++) {
 			System.out.print(arr[arr.length-1][i]+" ");
 		}

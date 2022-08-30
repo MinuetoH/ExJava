@@ -14,8 +14,8 @@ public class Test9 {
 		for(int i=0;i<arr.length;i++) {
 			arr[i] = (int)(Math.random()*100)+1;
 		}
-		
-		Arrays.sort(arr);
+		//Arrays 클래스 : 배열객체의 보조 클래스.
+		Arrays.sort(arr);	//배열 요소 정렬
 		
 		for(int i:arr) {
 			System.out.print(i+",");

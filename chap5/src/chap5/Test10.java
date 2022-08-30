@@ -33,28 +33,34 @@ public class Test10 {
 		int num = scan.nextInt();
 		int[] coin = {500,100,50,10,5,1};
 		int[] count = {5,5,5,5,5,5};
-		int total = 500*5+100*5+50*5+10*5+5*5+1*5;
-		
-		
-		if(num>total)
-			System.out.println("동전이 부족합니다.");
-		else {
-			for(int i=0;i<coin.length;i++) {
-				if((num/coin[i]>5)) {
-					System.out.println(coin[i]+"원: "+count[i]);
-					num = num - coin[i]*count[i];
-					count[i] = 0;
-				}else{
-					System.out.println(coin[i]+"원: "+(num/coin[i]));
-					count[i] = count[i]-(num/coin[i]);
-					num = num%coin[i];
-				}
-			}
-			for(int i=0;i<count.length;i++) {
-				System.out.println("남은 동전 "+coin[i]+"원:"+count[i]+"개");
-			}
-				
+		int total = 0;
+		//동전의 최대급액 : 환전가능 금액
+		for(int i=0;i<coin.length;i++) {
+			total += coin[i]*count[i];
 		}
+		
+		if(num>total) {
+			System.out.println("동전이 부족합니다.");
+			return;	//main 메서드 종료.
+		}
+		
+		//동전을 바꿔줄 수 있는 경우
+		for(int i=0;i<coin.length;i++) {
+			if((num/coin[i]>count[i])) {
+				System.out.println(coin[i]+"원: "+count[i]);
+				num -= coin[i]*count[i];
+				count[i] = 0;
+			}else{
+				System.out.println(coin[i]+"원: "+(num/coin[i]));
+				count[i] -= (num/coin[i]);
+				num = num%coin[i];
+			}
+		}
+		for(int i=0;i<count.length;i++) {
+			System.out.println("남은 동전 "+coin[i]+"원:"+count[i]+"개");
+		}
+				
+		
 		
 	}
 }
