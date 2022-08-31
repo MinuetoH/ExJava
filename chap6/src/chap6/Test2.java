@@ -30,6 +30,7 @@ class Animal1 {
 class Animal2 {
 	String name;
 	int age;
+	//객체를 문자열화 하는 메서드. 참조변수가 출력되면 자동 호출되는 메서드
 	public String toString() {
 		return "이름(name):"+name+"\n"+"나이(age):"+age+"\n"+"맛있게 얌얌";
 	}
