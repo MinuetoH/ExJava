@@ -34,7 +34,7 @@ public class ModifierEx1 {
 		System.out.println("m.v4=" + m.v4);
 		m.method();
 		
-		Modifier2 m2 = new Modifier2();
+		Modifier2 m2 = new Modifier2();	//ModifierEx1 클래스와 다른 패키지의 클래스
 //		System.out.println("m2.v1"+m2.v1);	//private 접근불가
 //		System.out.println("m2.v2"+m2.v2);	//패키지가 달라서 접근불가
 //		System.out.println("m2.v3"+m2.v3);	//상속관계도 아니므로 접근 불가
