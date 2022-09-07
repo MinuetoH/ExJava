@@ -12,6 +12,12 @@ Mysql DB에 삽입
 Mysql DB에 수정
 Mysql DB에서 삭제 
  */
+interface DataAccessObject{
+	void select();
+	void insert();
+	void update();
+	void delete();
+}
 class OracleDao implements DataAccessObject {
 	public void select() {
 		System.out.println("Oracle DB에서 검색");
@@ -39,12 +45,6 @@ class MySqlDao implements DataAccessObject {
 	public void delete() {
 		System.out.println("Mysql DB에서 삭제 ");
 	}
-}
-interface DataAccessObject{
-	void select();
-	void insert();
-	void update();
-	void delete();
 }
 public class Test2 {
 	public static void main(String[] args) {
