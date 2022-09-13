@@ -15,10 +15,10 @@ class Student {
 		this.major = major;
 	}
 	@Override
-	public boolean equals(Object obj) {
-		if(obj instanceof Student) {
-			Student s = (Student)obj;
-			return studno == s.studno && name == s.name;
+	public boolean equals(Object o) {
+		if(o instanceof Student) {
+			Student s = (Student)o;
+			return studno == s.studno &&  name.equals(s.name);
 		}else return false;
 	}
 	@Override

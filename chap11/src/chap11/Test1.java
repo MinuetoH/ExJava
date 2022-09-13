@@ -22,8 +22,9 @@ class Outer10 {
 
 public class Test1 {
 	public static void main(String[] args) {
-		Outer10 o = new Outer10();
-		Outer10.Inner1 oi1 = o.new Inner1();
+		Outer10.Inner1 oi1 = new Outer10().new Inner1();
+//		Outer10 o = new Outer10();
+//		Outer10.Inner1 oi1 = o.new Inner1();
 		Outer10.Inner2 oi2 = new Outer10.Inner2();
 		System.out.println("Outer10.Inner1.iv:"+oi1.iv);
 		System.out.println("Outer10.Inner1.cv:"+Outer10.Inner1.cv);
